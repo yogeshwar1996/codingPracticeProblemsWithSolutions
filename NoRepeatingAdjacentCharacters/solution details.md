@@ -1,0 +1,1 @@
+Time complexity O(n) as we iterate the entire strnig once.
