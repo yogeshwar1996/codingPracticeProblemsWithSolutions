@@ -1,10 +1,12 @@
 # Solution
 
-For arrays we can get use this syntax `arr[:d]` to get elements from starting to d-1 index
+If we have to do 'n' no of rotations. It means first 'n' elements will go in the last
 
-and we can use `arr[d:]` to get elements starting from d till end
+If n elements are `arr[:n]`. This gives elements from index 0 to n-1
+The elements from index n and onwards can be fetched using `arr[n:]`
 
-For out solution we just need to move the elements starting and ahead of d forward by doing
+To get the result we need to do put first n elements in the last as follows
+
 ```
-arr[d:] + arr[:d]
+arr[n:] + arr[:n]
 ```

@@ -9,7 +9,7 @@ For a 6 x 6 2-D Array like this
 0 0 0 1 3 2
 ```
 
-hour glass is a patter like
+hour glass is a pattern like
 ```
 1 1 1
   1

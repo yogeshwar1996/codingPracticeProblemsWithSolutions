@@ -1,0 +1,30 @@
+Scenarios
+//No bribe
+1 2 3 4 5 6 7
+
+//One bribe by 5 
+1 2 3 5 4 6 7
+
+//Two bribes
+1 2 3 6 4 5 7  i.e 6 bribed 4 and 5
+1 2 3 6 7 4 5  i.e 6 bribed 4 and 5, then 7 bribed 4 and 5
+1 2 3 5 4 7 6  i.e 5 bribed 4, then 7 bribed 6
+
+//Three bribes
+1 2 3 7 4 5 6
+
+
+I am at index i = 0
+my value is a[i] = 1
+
+next number 
+- will be at index i+1 
+- or we can say at index a[i], i.e current value will be index of next value
+
+we can say value at index a[i] should be a[i]+1
+
+i    = 0 1 2 3 4 5 
+a[i] = 1 2 3 4 5 6 
+
+
+

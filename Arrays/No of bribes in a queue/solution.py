@@ -1,28 +1,20 @@
-def minimumBribes(q):
+def minimum_bribes(queue):
+    chaotic = False
     bribes = 0
-    i = 0
-    n = len(q)
 
-    while i < n:
-        if q[i] != (i + 1):
-            # Check if the current person is too far ahead of their original position
-            if q[i] - (i + 1) > 2:
-                print("Too chaotic")
-                return
+    for currentIndex, currentValue in enumerate(queue):
+        expectedValueAtCurrentIndex = currentIndex + 1
+        if currentValue - expectedValueAtCurrentIndex > 2:
+            chaotic = True
 
-            # Check for larger numbers ahead until a smaller number is found
-            j = i - 1
-            while j >= 0:
-                if q[j] > q[i]:
-                    bribes += 1
-                    j -= 1
-                else:
-                    break
+        # From index 0 to currentIndex - 1
+        # For all values from the starting, and before the current value
+        # If any value is greater than current value, it has bribed the current value
+        for index in range(currentIndex):
+            if queue[index] > currentValue:
+                bribes += 1
 
-        i += 1
-
-    print(bribes)
-
-
-# Example use
-minimumBribes([2, 1, 5, 3, 4])  # Output: 3
+    if chaotic:
+        print("Too chaotic")
+    else:
+        print(bribes)
