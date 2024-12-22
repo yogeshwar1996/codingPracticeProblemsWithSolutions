@@ -3,11 +3,10 @@ def minimum_bribes(queue):
     bribes = 0
 
     for currentIndex, currentValue in enumerate(queue):
-        expectedValueAtCurrentIndex = currentIndex + 1
-        if currentValue - expectedValueAtCurrentIndex > 2:
+        expectedCurrentValue = currentIndex + 1
+        if currentValue - expectedCurrentValue > 2:
             chaotic = True
 
-        # From index 0 to currentIndex - 1
         # For all values from the starting, and before the current value
         # If any value is greater than current value, it has bribed the current value
         for index in range(currentIndex):
